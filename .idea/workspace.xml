@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae94f74b-0875-4916-9945-486d3310fd97" name="Changes" comment="add BeforeStep.java">
+    <list default="true" id="ae94f74b-0875-4916-9945-486d3310fd97" name="Changes" comment="add ApiSteps.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +67,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Cucumber Java.Scenario: Отправляем запрос, получаем статус код 200">
     <configuration name="Scenario: Отправляем запрос, получаем статус код 200" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
@@ -258,7 +257,42 @@
       <option name="project" value="LOCAL" />
       <updated>1661254032686</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update build.gradle">
+      <created>1661345480314</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1661345480314</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update workspace.xml">
+      <created>1661345494383</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1661345494383</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add registration.feature">
+      <created>1661345544322</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661345544322</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add ApiSteps.java">
+      <created>1661345566520</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661345566520</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add ApiSteps.java">
+      <created>1661345655451</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1661345655451</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -288,7 +322,12 @@
     <MESSAGE value="add AfterStep.java" />
     <MESSAGE value="add KlavogonkiStep.java" />
     <MESSAGE value="add BeforeStep.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="add BeforeStep.java" />
+    <MESSAGE value="update build.gradle" />
+    <MESSAGE value="update workspace.xml" />
+    <MESSAGE value="add registration.feature" />
+    <MESSAGE value="add UISteps.java" />
+    <MESSAGE value="add ApiSteps.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ApiSteps.java" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CucumberTest$Scenario_______.ic" NAME="Scenario: Проверяем валидные значения логина и пароля Coverage Results" MODIFIED="1661263360254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
