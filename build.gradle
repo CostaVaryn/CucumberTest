@@ -8,17 +8,24 @@ version '1.0-SNAPSHOT'
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
+def junitVersion = "5.7.0"
+
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    testImplementation 'io.cucumber:cucumber-java:7.3.4'
-    testImplementation 'com.codeborne:selenide:6.6.6'
-    testImplementation 'io.rest-assured:rest-assured:4.4.0'
+compileJava.options.encoding = 'UTF-8'
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    testImplementation 'io.cucumber:cucumber-java:7.1.0'
+    testImplementation 'com.codeborne:selenide:6.13.0'
+    testImplementation 'io.rest-assured:rest-assured:4.4.0'
 }
 
 test {
