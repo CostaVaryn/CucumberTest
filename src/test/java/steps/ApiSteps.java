@@ -8,11 +8,12 @@ import org.junit.jupiter.api.Assertions;
 
 public class ApiSteps {
     private String var;
+
     public String getVar() {
         return var;
     }
 
-    @When("^отправли запрос на ресурс \"([^\"]*)\"$")
+    @When("^отправили запрос на ресурс \"([^\"]*)\"$")
     public void sendRequest(String url) {
         Selenide.open(url);
         var = String.valueOf(RestAssured.given().get(url).statusCode());

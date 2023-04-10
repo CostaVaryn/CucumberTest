@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class UISteps {
 
     @When("^открыт сайт \"([^\"]*)\"$")
@@ -19,8 +21,11 @@ public class UISteps {
     @When("^в поле \"([^\"]*)\" ввели значение \"([^\"]*)\"$")
     public void inputValue(String fieldName, String fieldValue) throws InterruptedException {
         String name;
-        if(fieldName.equals("Login")) name = "uid";
-        else name = "password";
+        if (fieldName.equals("Login")) {
+            name = "uid";
+        } else {
+            name = "password";
+        }
         WebDriverRunner.getWebDriver().findElement(By.name(name)).sendKeys(fieldValue);
         // Thread.sleep(3000);
     }
@@ -33,14 +38,14 @@ public class UISteps {
     @When("^адрес сайта равен \"([^\"]*)\"$")
     public void checkUrl(String url) {
         String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
-        Assertions.assertEquals(currentUrl, url);
+        assertEquals(currentUrl, url);
     }
 
     @When("^проверяем пустоту полей$")
     public void checkResetEmpty() {
         String login = WebDriverRunner.getWebDriver().findElement(By.name("uid")).getText();
         String password = WebDriverRunner.getWebDriver().findElement(By.name("password")).getText();
-        Assertions.assertEquals("", login);
-        Assertions.assertEquals("", password);
+        assertEquals("", login);
+        assertEquals("", password);
     }
 }

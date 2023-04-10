@@ -4,10 +4,10 @@ import com.codeborne.selenide.SelenideElement;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Selenide.$x;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KlavogonkiStep {
     private final SelenideElement closeWinButton = $x("//input[@value='Закрыть']");
@@ -17,7 +17,7 @@ public class KlavogonkiStep {
     private final SelenideElement afterFocusWord = $x("//span[@id='afterfocus']");
     private final SelenideElement resultText = $x("//td[text()='Это вы']//ancestor-or-self::div//div[@class='stats']//div[2]/span/span");
 
-    private String getCurrentWord(){
+    private String getCurrentWord() {
         return highlightWord.getText()
                 .replaceAll("c", "с")
                 .replaceAll("o", "о");
@@ -26,7 +26,7 @@ public class KlavogonkiStep {
     @When("Start the game")
     public void startTheGame() {
         closeWinButton.click();
-        if(startGameButton.isDisplayed()){
+        if (startGameButton.isDisplayed()) {
             startGameButton.click();
         }
     }
@@ -42,7 +42,7 @@ public class KlavogonkiStep {
             String currentWord = getCurrentWord();
             String afterFocusSymbol = afterFocusWord.getText();
             inputField.sendKeys(currentWord);
-            if(afterFocusSymbol.equals(".")){
+            if (afterFocusSymbol.equals(".")) {
                 inputField.sendKeys(".");
                 break;
             }
@@ -55,6 +55,6 @@ public class KlavogonkiStep {
         String result = resultText.getText();
         int resultNumber = Integer.parseInt(result);
         System.out.println("Number of characters per minute: " + resultNumber);
-        Assertions.assertTrue(resultNumber > minValue, "The current result was: " + resultNumber);
+        assertTrue(resultNumber > minValue, "The current result was: " + resultNumber);
     }
 }
