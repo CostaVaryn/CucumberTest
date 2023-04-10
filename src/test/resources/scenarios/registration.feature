@@ -7,6 +7,7 @@ Feature: Проверка функционала формы регистраци
     And в поле "Login" ввели значение "mngr320665"
     And в поле "Password" ввели значение "barEgum"
     And нажать кнопку "btnLogin"
+    # User is not valid!
     Then адрес сайта равен "http://demo.guru99.com/V1/html/Managerhomepage.php"
 
   Scenario: Проверяем валидные значения логина и пароля
