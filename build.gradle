@@ -27,8 +27,8 @@ dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
     testImplementation "io.cucumber:cucumber-java:$cucuVersion"
-    testImplementation "com.codeborne:selenide:6.13.0$selenideVersion"
-    testImplementation "io.rest-assured:rest-assured:4.4.0$restAssuredVersion"
+    testImplementation "com.codeborne:selenide:$selenideVersion"
+    testImplementation "io.rest-assured:rest-assured:$restAssuredVersion"
 }
 
 test {
