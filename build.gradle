@@ -8,7 +8,10 @@ version '1.0-SNAPSHOT'
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
-def junitVersion = "5.7.0"
+def junitVersion = "5.7.0",
+    cucuVersion = "7.1.0",
+    selenideVersion = "6.13.0",
+    restAssuredVersion = "4.4.0"
 
 repositories {
     mavenCentral()
@@ -23,9 +26,9 @@ tasks.withType(JavaCompile) {
 dependencies {
     testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
-    testImplementation 'io.cucumber:cucumber-java:7.1.0'
-    testImplementation 'com.codeborne:selenide:6.13.0'
-    testImplementation 'io.rest-assured:rest-assured:4.4.0'
+    testImplementation "io.cucumber:cucumber-java:$cucuVersion"
+    testImplementation "com.codeborne:selenide:6.13.0$selenideVersion"
+    testImplementation "io.rest-assured:rest-assured:4.4.0$restAssuredVersion"
 }
 
 test {
